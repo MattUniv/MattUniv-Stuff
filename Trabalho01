@@ -1,0 +1,73 @@
+package br.edu.univas.exercicios;
+
+import java.util.*;
+
+public class Trabalho01 {
+	
+	public static void main(String[] args) {
+		int input = 0;
+		float resultado;
+		
+		Scanner sc = new Scanner(System.in);
+		
+		while (input != 9) {
+			System.out.println("Escolha um Poligono: ");
+			System.out.println("1. Quadrado");
+			System.out.println("2. Circulo");
+			System.out.println("3. Trapézio");
+			System.out.println("4. Triângulo");
+			System.out.println("9. Sair");
+			input = sc.nextInt();
+			
+			if (input == 1) { // Quadrado
+				// Leitura
+				System.out.print("Base: ");
+				int base = sc.nextInt();
+
+				// Calculo
+				resultado = base * base;
+				System.out.println("A Área do Quadrado é igual a: " + resultado);
+			}
+			else if (input == 2) { // Circulo
+				// Leitura
+				System.out.print("Raio: ");
+				int raio = sc.nextInt();
+
+				// Calculo
+				int diametro = raio * 2;
+				resultado = diametro * 3.14f;
+				System.out.println("A Área do Circulo é igual a: " + resultado);
+			}
+			else if (input == 3) { // Trapézio
+				// Leitura
+				System.out.print("Base Maior: ");
+				int baseMa = sc.nextInt();
+				System.out.print("Base Menor: ");
+				int baseMe = sc.nextInt();
+				System.out.print("Altura: ");
+				int altura = sc.nextInt();
+				
+				// Calculo
+				resultado = ((baseMa * baseMe) * altura) / 2;
+				System.out.println("A Área do Trapézio é igual a: " + resultado);
+			}
+			else if (input == 4) { // Triângulo
+				// Leitura
+				System.out.print("Base: ");
+				int base = sc.nextInt();
+				System.out.print("Altura: ");
+				int altura = sc.nextInt();
+				
+				// Calculo
+				resultado = (base * altura) / 2;
+				System.out.println("A Área do Triângulo é igual a: " + resultado);
+			}
+			else if (input == 9) { // Sair
+				System.out.println("Programa Finalizado");
+			}
+			else {
+				System.out.println("Opção inválida! Por favor, digite uma opção correta!");
+			}
+		}
+	}
+}
